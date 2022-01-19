@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/widget/Drawer.dart';
 
 class HomePage extends StatelessWidget {
   final String name = "Rutuja";
@@ -9,7 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("MyApp"),
+        title: const Text("MyApp", style:TextStyle(color: Colors.black),),
       ),
       body: Center(
         // there is was use of container here. removed it and directly assign
@@ -19,9 +20,13 @@ class HomePage extends StatelessWidget {
         // if you want to see the uses or parameters of a widget then just take
         // the cursor and hover over that widget's name you will see all the
         // parameters of that widget
-        child: Text("welcome $name"),
+        child: Container
+          (child: Text("welcome $name")),
       ),
-      drawer: const Drawer(),
+      drawer: MyDrawer(
+
+
+      ),
     );
   }
 }
