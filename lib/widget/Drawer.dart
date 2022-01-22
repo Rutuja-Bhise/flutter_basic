@@ -10,8 +10,8 @@ class MyDrawer extends StatelessWidget {
       child: Container(
         color: Colors.deepPurple,
         child: ListView(
-          children: [
-            const DrawerHeader(
+          children: const [
+            DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
